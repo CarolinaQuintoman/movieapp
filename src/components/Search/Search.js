@@ -23,12 +23,12 @@ const Search = () => {
 
   return (
     <div className="add-page">
-      <div className="conteiner">
+      <div className="container">
         <div className="add-content">
           <div className="input-wrapper">
             <input type="text"
             placeholder="Search"
-            value={query}
+            value={query || ""}
             onChange={onChange} />
           </div>
           {results.length > 0 &&(

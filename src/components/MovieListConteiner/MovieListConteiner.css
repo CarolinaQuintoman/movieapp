@@ -1,0 +1,5 @@
+
+.movie-conteiner{
+        display: flex;
+        flex-wrap: wrap;
+}

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import MovieDetail from "../components/MovieDetail/MovieDetail";
+import MovieDetailCont from "../components/MovieDetail/MovieDetailCont";
 import MovieListConteiner from "../components/MovieListConteiner/MovieListConteiner";
 
 const Rutas = () => {
@@ -10,7 +10,7 @@ const Rutas = () => {
         <Routes>
           <Route  path='/' element={<Layout />} >
             <Route index element={<MovieListConteiner />} />
-            <Route path='/detail/:id' element={<MovieDetail/>}/>
+            <Route path='/detail/:id' element={<MovieDetailCont/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

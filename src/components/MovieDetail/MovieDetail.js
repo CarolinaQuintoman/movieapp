@@ -9,7 +9,7 @@ const MovieDetail = ({ id, poster_path, title, overview, vote_average }) => {
     
   return (
     <>
-      <div className="card" style={{ width:`18rem`}}>
+      <div className="card">
         <h1>{id}</h1>
         <img src={poster_path} className="card-img-top" alt={title} />
         <div className="card-body">
