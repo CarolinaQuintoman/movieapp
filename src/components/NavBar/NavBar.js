@@ -1,13 +1,14 @@
 import React from "react";
 import Search from "../Search/Search";
+import logo from '../../assets/quintoMov.png'
 
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+      <nav className="navbar navbar-expand-lg bg-dark bg-primary">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            LOGO
+           <img src={logo} style={{maxWidth:"25%"}} alt='some value'/>
           </a>
           <button
             className="navbar-toggler"
