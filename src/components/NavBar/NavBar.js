@@ -1,12 +1,13 @@
 import React from "react";
 import Search from "../Search/Search";
-import logo from '../../assets/quintoMov.png'
+import logo from '../../assets/quintoMov.png';
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-dark bg-primary">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-primary">
+        <div className="container-fluid" >
           <a className="navbar-brand" href="/">
            <img src={logo} style={{maxWidth:"25%"}} alt='some value'/>
           </a>
@@ -48,7 +49,7 @@ const NavBar = () => {
                   </li>
                   <li>
                     <a className="dropdown-item" href="/">
-                      Another action
+                      Drama
                     </a>
                   </li>
                   <li>
@@ -57,9 +58,8 @@ const NavBar = () => {
                 </ul>
               </li>
             </ul>
-            <Search />
-              
-          </div>
+            <Search/>
+           </div>
         </div>
       </nav>
     </>

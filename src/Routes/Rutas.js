@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../components/Layout/Layout";
+import Layout from "../Layout/Layout";
 import MovieDetailCont from "../components/MovieDetail/MovieDetailCont";
 import MovieListConteiner from "../components/MovieListConteiner/MovieListConteiner";
 

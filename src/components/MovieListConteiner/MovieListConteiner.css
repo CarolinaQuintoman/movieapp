@@ -1,5 +1,9 @@
-
-.movie-conteiner{
-        display: flex;
-        flex-wrap: wrap;
+*{
+        box-sizing: border-box;
 }
+
+.columna-movie{
+        display: flex;
+}
+
+

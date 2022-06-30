@@ -1,37 +1,40 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import MovieDetail from '../MovieDetail/MovieDetail'
-import './MovieDetailCont.css';
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import MovieDetail from "../MovieDetail/MovieDetail";
+import "./MovieDetailCont.css";
+import { getMovies } from "./../../services/moviesService";
+
+//const discover = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIES_API_KEY}&language=en-US&sort_by=popularity.desc&page=1`;
 
 const MovieDetailCont = () => {
-    const {id} = useParams();    
-    const [ movie, setMovie] = useState(null);
+  const [movies, setMovies] = useState([]);
+  const { id } = useParams();
+  
+  const movie = movies.find((mov) => mov.id === Number(id));
     
-    const filtrar = movie.find((mov) => mov.id === Number (id))
-    console.log(filtrar)
-  
-    useEffect(() => { 
-      const promesa = new Promise((resolve, reject) =>{
-      setTimeout(() => {
-        resolve(filtrar)
-      }, 2000);
-      });
-  
-      promesa
-      .then((res) =>{
-        setMovie(res)    //le estoy cambiando el estado
-      })
-      .then(() => console.log(movie))
-      .catch((err) => console.log (err));
-    
-    }, [movie,filtrar]);
-  
-    return (
-      <div className='movie-conteiner'>
-        {movie ? <MovieDetail movie={movie}/> : <h1>Cargando...</h1>  }
-      </div>
-    )
-}
+  useEffect(() => {
+    getMovies().then((moviesResponse) => {
+      setMovies(moviesResponse);
+    })
+  }, []);
 
-export default MovieDetailCont
+  
+
+  //const [ movie, setMovie] = useState([]);
+
+  return (
+    <>
+      <div className="movie-conteiner">
+        {movie ? 
+        <MovieDetail 
+        movie={movie}
+        {...movie}
+        /> : <h1>Cargando...</h1>}
+      </div>
+      
+    </>
+  );
+};
+
+export default MovieDetailCont;

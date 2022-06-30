@@ -1,0 +1,8 @@
+.container-fluid {
+    background-color: #00e0c6;
+}
+.navbar {
+    background-color: #009393;
+    position: relative;
+    overflow: visible;
+}

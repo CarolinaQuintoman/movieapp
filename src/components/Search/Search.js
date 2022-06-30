@@ -25,6 +25,7 @@ const Search = () => {
     <div className="add-page">
       <div className="container">
         <div className="add-content">
+          
           <div className="input-wrapper">
             <input type="text"
             placeholder="Search"
@@ -32,7 +33,7 @@ const Search = () => {
             onChange={onChange} />
           </div>
           {results.length > 0 &&(
-            <ul className="results">
+            <ul className="results" >
               {results.map(movie =>(
                 <li key={movie.id}>
                    <ResultsCard movie={movie}/>   
