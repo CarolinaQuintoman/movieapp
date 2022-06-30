@@ -1,25 +1,26 @@
 import React from "react";
-//import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
+// import { useEffect,useState } from "react";
+// import { getMovie } from "../../services/moviesService";
 
 
 
-const MovieDetail = ({ id, poster_path, title, overview, vote_average }) => {
+const MovieDetail = ({movie}) => {
 
-    // const {id} = useParams()
-    
+   
   return (
     <>
       <div className="card">
-        <h1>{id}</h1>
-        <img src={poster_path} className="card-img-top" alt={title} />
+        <h1>??????</h1>
+        <img src={movie.poster_path} className="card-img-top" alt={movie.title} />
         <div className="card-body">
-            <h1>{title} </h1>
+            <h1>{movie.title} </h1>
           <p className="card-text">
-            {overview}
+            {movie.overview}
           </p>
-          <p>{vote_average}</p>
+          <p>{movie.vote_average}</p>
         </div>
-      
+        
       </div>
     </>
   );

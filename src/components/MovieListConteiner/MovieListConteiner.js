@@ -20,13 +20,13 @@ const MovieListConteiner = () => {
 
   return (
     <>
-      <div className="movie-container">
-        <div class="container">
-          <div class="row row-cols-3">
-            <div class="col">
+      <div className="container">
+        <div className="row" style={{justifyContent:'center'}}>
+          <div className="columna-movie" style={{display:"contents", alignContent:'space-around'}}>
+            {/* <div className='col-md-4'> */}
               {movies.length > 0 &&
                 movies.map((movie) => <Movie key={movie.id} {...movie} />)}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
