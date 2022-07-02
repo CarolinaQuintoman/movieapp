@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import ResultsCard from '../ResultsCard/ResultsCard';
+import './Search.css' 
 
 const Search = () => {
 
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  
 
   const onChange = (e) => {
     e.preventDefault();
@@ -22,27 +24,34 @@ const Search = () => {
   }
 
   return (
-    <div className="add-page">
+    <div className="add-page" >
       <div className="container">
-        <div className="add-content">
+        <div className="row">
           
-          <div className="input-wrapper">
+          <div className="input-wrapper" style={{margin: '25px 0 0 500px'}}>
             <input type="text"
             placeholder="Search"
             value={query || ""}
-            onChange={onChange} />
+            onChange={onChange} 
+            results={results}
+            style={{marginBottom:'100px'}}
+            />
           </div>
           {results.length > 0 &&(
             <ul className="results" >
               {results.map(movie =>(
-                <li key={movie.id}>
-                   <ResultsCard movie={movie}/>   
+                <li key={movie.id}
+                    style={{listStyleType: 'none'}}>
+                  <ResultsCard 
+                   movie={movie} 
+                   />   
                 </li>
               ))}
 
             </ul>
           )}
         </div>
+        
       </div>
 
     </div>

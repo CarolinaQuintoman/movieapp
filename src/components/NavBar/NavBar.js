@@ -1,6 +1,7 @@
 import React from "react";
-import Search from "../Search/Search";
+import { NavLink } from "react-router-dom";
 import logo from '../../assets/quintoMov.png';
+import Icons from "../Icons/Icons";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -58,7 +59,10 @@ const NavBar = () => {
                 </ul>
               </li>
             </ul>
-            <Search/>
+            <NavLink to='/search' class="btn btn-outline-success" type="submit" style={{marginRigth:'30px', padding:'15px'}}>
+              <Icons />
+              
+            </NavLink>
            </div>
         </div>
       </nav>
