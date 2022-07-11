@@ -1,9 +1,8 @@
 *{
         box-sizing: border-box;
+        
 }
 
 .columna-movie{
         display: flex;
 }
-
-

@@ -1,0 +1,9 @@
+.card-body{
+    color: azure;
+   
+}
+.star{
+    cursor: -webkit-grab; 
+    cursor: grab;
+    transition: 2ms;
+}
