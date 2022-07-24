@@ -1,15 +1,17 @@
 import React from "react";
-import Search from "../Search/Search";
-import logo from '../../assets/quintoMov.png';
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/quintoMov.png";
+import Icons from "../Icons/Icons";
+import Rating from "../Rating/Rating";
 import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-primary">
-        <div className="container-fluid" >
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
           <a className="navbar-brand" href="/">
-           <img src={logo} style={{maxWidth:"25%"}} alt='some value'/>
+            <img src={logo} style={{ maxWidth: "25%" }} alt="some value" />
           </a>
           <button
             className="navbar-toggler"
@@ -25,7 +27,12 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/"
+                  style={{ color: "white" }}
+                >
                   Inicio
                 </a>
               </li>
@@ -38,6 +45,7 @@ const NavBar = () => {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  style={{ color: "white" }}
                 >
                   Categoria
                 </a>
@@ -58,8 +66,23 @@ const NavBar = () => {
                 </ul>
               </li>
             </ul>
-            <Search/>
-           </div>
+            {/* <NavLink to="/rating"> */}
+              <Rating />
+            {/* </NavLink> */}
+            <NavLink
+              to="/search"
+              className="btn btn-outline-success"
+              type="submit"
+              style={{
+                marginRigth: "30px",
+                padding: "15px",
+                color: "white",
+                borderColor: "#213a5c",
+              }}
+            >
+              <Icons />
+            </NavLink>
+          </div>
         </div>
       </nav>
     </>
