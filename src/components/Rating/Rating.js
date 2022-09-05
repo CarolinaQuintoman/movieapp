@@ -19,7 +19,6 @@ const Rating = ({ movie }) => {
     }
    getStarValue(starValue)
   }, [starValue])
-  console.log(movies);
   
 
   return (
