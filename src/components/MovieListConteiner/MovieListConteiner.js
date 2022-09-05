@@ -8,14 +8,15 @@ const MovieListConteiner = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    getMovies(discover);
+    getMovies(discover)
   }, []);
+
   const getMovies = (api) => {
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
-        console.log(data);
+        //console.log(data);
       });
   };
 

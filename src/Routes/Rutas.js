@@ -3,6 +3,7 @@ import Layout from "../Layout/Layout";
 import MovieDetailCont from "../components/MovieDetail/MovieDetailCont";
 import MovieListConteiner from "../components/MovieListConteiner/MovieListConteiner";
 import Search from "../components/Search/Search";
+import RaitingAction from "../components/Rating/RatingAction";
 //import Rating from "../components/Rating/Rating";
 
 
@@ -17,7 +18,7 @@ const Rutas = () => {
           </Route>
           <Route path='/search' element={<Search/>} />
           <Route path='/detail/:id' element={<MovieDetailCont/>}/>
-          {/* <Route path='/rating' element={< Rating/>} /> */}
+          <Route path='/rating' element={< RaitingAction/>} />
         </Routes>
       </BrowserRouter>
     </>
